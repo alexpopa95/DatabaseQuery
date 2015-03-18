@@ -19,7 +19,8 @@
         </activity>
         <activity
             android:name=".CreateActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.Light.Dialog" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,7 +29,8 @@
         </activity>
         <activity
             android:name=".InsertActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.Light.Dialog" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -37,7 +39,8 @@
         </activity>
         <activity
             android:name=".QuestionActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.Light.Dialog" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -46,7 +49,8 @@
         </activity>
         <activity
             android:name=".SetDataActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat.Light.Dialog" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

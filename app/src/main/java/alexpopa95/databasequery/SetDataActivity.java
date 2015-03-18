@@ -17,15 +17,26 @@ public class SetDataActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.set_data);
-    }
-
-    public void setDataAction(View view) {
-        TextView tv1 = (TextView) findViewById(R.id.editText6);
-        TextView tv2 = (TextView) findViewById(R.id.editText7);
         TextView tv3 = (TextView) findViewById(R.id.editText8);
         TextView tv4 = (TextView) findViewById(R.id.editText9);
         TextView tv5 = (TextView) findViewById(R.id.editText10);
 
-        Database.impostaDati(tv1.getText().toString(), tv2.getText().toString(), tv3.getText().toString(), tv4.getText().toString(), tv5.getText().toString(), this);
+        tv3.setText(Database.username);
+        tv4.setText(Database.password);
+        tv5.setText(Database.db_name);
+
+
+    }
+
+    public void setDataAction(View view) {
+        TextView tv3 = (TextView) findViewById(R.id.editText8);
+        TextView tv4 = (TextView) findViewById(R.id.editText9);
+        TextView tv5 = (TextView) findViewById(R.id.editText10);
+
+        Database.impostaDati(tv3.getText().toString(), tv4.getText().toString(), tv5.getText().toString(), this);
+
+        //MainActivity.main.connect();
+
+        this.finish();
     }
 }

@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import alexpopa95.databasequery.DB.Database;
 
@@ -20,7 +21,13 @@ public class CreateActivity extends Activity {
 
     public void aggiungiTabella(View view) {
         TextView tb = (TextView) findViewById(R.id.editText);
-
-        Database.aggiungiTabella(tb.getText().toString());
+        String text = tb.getText().toString();
+        if(text != null) {
+            Database.aggiungiTabella(tb.getText().toString());
+            this.finish();
+        }
+        else {
+            Toast.makeText(this, "Compila tutti i campi!", Toast.LENGTH_SHORT).show();
+        }
     }
 }
